@@ -4,9 +4,10 @@ const router = express.Router()
 const Quiz = require('../models/quiz')
 
 router.route('/').get((req,res)=>{
-    Quiz.find()
-    .then(data=>res.status(200).send(data))
-    .catch(err=>console.log(err))
+    res.send("QUIZ")
+    // Quiz.find()
+    // .then(data=>res.status(200).send(data))
+    // .catch(err=>console.log(err))
 })
 
 router.route('/add').post((req,res)=>{
