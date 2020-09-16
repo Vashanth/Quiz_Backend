@@ -12,6 +12,10 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser:true, useUnifiedTopolog
 app.use('/quiz',require('./routes/quiz'))
 app.use('/scores',require('./routes/rank'))
 
+app.get('/',(req,res)=>{
+    res.send("Home")
+})
+
 app.listen(PORT || 5000 ,()=>{
     console.log("Server running on port " + PORT)
 })
